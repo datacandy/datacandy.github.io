@@ -78,6 +78,7 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
+  height: 300;
   padding: 0 20px;
   width: 100%;
   text-align: center;

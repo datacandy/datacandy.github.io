@@ -22,6 +22,11 @@
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="css/style.css" />
+
+      <script type='text/javascript' src='background/js/jquery.particleground.js'></script>
+  <script type='text/javascript' src='background/js/demo.js'></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -71,21 +76,31 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <header class="intro-header" style="background-image: url('img/home-bg.png')">
+
         <div class="container">
+            
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Telling Data Driven Stories</h1>
-                        <hr class="small">
-                        <span class="subheading">Presentation on tools for data exploration, data analysis, and data presentation for data driven storytelling</span>
-                        <br><br><br>
-                        <span class="small">Ben Heubl, for Warwick University</span>
-                    </div>
-                </div>
-            </div>
+               
+                        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                            <div class="site-heading">
+                                <h1>Telling Data Driven Stories</h1>
+                                <hr class="small">
+                                <span class="subheading">Presentation on tools for data exploration, data analysis, and data presentation for data driven storytelling</span>
+                                <br><br><br>
+                                <span class="small">Ben Heubl, for Warwick University</span>
+                            </div>
+                            <div id="particles">
+                            <div id="intro">
+                            </div>
+                        </div>
+                        </div>
+                        
         </div>
+
+</div>
     </header>
+
 
     <!-- Main Content -->
     <div class="container">
@@ -94,57 +109,83 @@
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
+                            Quick Tutorial: Open Data Detective
                         </h2>
                         <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
+                            How and where to find data for data driven stories?
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+                            Quick Tutorial: How to Clean the Data?
                         </h2>
+                        <h3 class="post-subtitle">
+                            Which tools can help you to get the data into the right format?
+                        </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
+                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Science has not yet mastered prophecy
+                            Quick Tutorial: Data Analysis
                         </h2>
                         <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
+                            How to analyse non-relational data with R, and relational data bases with Neo4j, why/why-not to use Tableau public, and how to use python to access Twitter data.
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
+                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
                 </div>
                 <hr>
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            Failure is not an option
+                            Quick Tutorial: Big Data
                         </h2>
                         <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                            How to play with big data as data journalist?
+                            <small>Intro to Apache Drill is an open-source software framework that supports data-intensive distributed applications for interactive analysis of large-scale datasets.</small>
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
                 </div>
                 <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
+
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Quick Tutorial: Data Visualisation
+                        </h2>
+                        <h3 class="post-subtitle">
+                            How to visualise your stuff?
+                            <small>Whether complex javascript libraties or not, at the end of your journey, you want to visualise </small>
+                        </h3>
+                    </a>
+                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
+                </div>
+
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Quick Tutorial: Front-end UX/UI
+                        </h2>
+                        <h3 class="post-subtitle">
+                            If you do decide to present your data stories on the web, you should know about a few more things...
+                        </h3>
+                    </a>
+                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
+                </div>
+               
             </div>
         </div>
     </div>
+
+    <a href="https://github.com/datacandy/warwick"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
     <hr>
 
@@ -179,7 +220,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="copyright text-muted">Copyright &copy; Ben Heubl & DataCandy, 2015</p>
                 </div>
             </div>
         </div>
@@ -197,3 +238,4 @@
 </body>
 
 </html>
+
