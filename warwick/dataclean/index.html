@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Data Cleaning</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Presentation Page</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="post.html">Sample Post</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/post-bg.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>How To Clean This Damn Data?</h1>
+                        <h2 class="subheading">Lets explore tools that can make your data storytelling job simpler</h2>
+                        <br><br><br> <br><br><br>
+                        <br><br><br> <br><br><br>
+                        <br><br><br> <br><br><br>
+                       <span class="small">Ben Heubl, for Warwick University</span>
+                    </div>
+               <!--      <div id="particles">
+                            <div id="intro">
+                            </div>
+                        </div> -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p></p>
+
+                    <p></p>
+
+                    <h2 class="section-heading">What tools are there?</h2>
+
+                    <p>Here is a list of alternative tools to clean my data that can be used. Some are open source, some aren't. Pick your guns!</p>
+
+                    <ul>
+                    <li><a href="https://github.com/OpenRefine">Open Refine (formerly called Google Refine)</a> (open)</li>
+                    <li>Ms Excel (buy)</li>
+                    <li><a href="https://www.libreoffice.org/">libreOffice (open)</a></li>
+                    <li>R (open)</li>
+                    <li>Python (open)</li>
+                    <li><a href="http://datacleaner.org/">DataCleaner (not sure)</a></li>
+                    <li>Cartodb to clean up GeoData (open to an extent)</li>
+                    <li><a href="http://www.qgis.org/en/site/">QGIS for GeoData</a> (open)</li>
+                    </ul>
+
+
+                    <p>Lets start with simple cleaning tools, and end with some of the more advanced techniques. Most basic to use are possibly programs like Excel, or - in my opinion more attractive - its open source counterparts, including Libre Office, OpenOffice or even Google docs.</p>
+
+                    <h2>Excel/LibreOffice/OpenOffice</h2>
+
+                    <p>Below a list of functions to help you to clean your data, or to redefine it.</p>
+
+                    <ul>
+                    <li>Filter: On Data tab, in the sort &amp; filter group, use advanced.</li>
+                    </ul>
+
+
+                    <p><img src="clean1.png" alt="image" width="100%"/></p>
+
+                    <ul>
+                    <li>Removal of duplicate rows (make a backup):</li>
+                    </ul>
+
+
+                    <p><img src="clean2.png" alt="image" width="100%" /></p>
+
+                    <p>Note: You cannot remove duplicate values from the data</p>
+
+                    <ul>
+                    <li>Conditional formatting for duplicate values:</li>
+                    </ul>
+
+
+                    <p><img src="clean3.png" alt="image" width="100%"/></p>
+
+                    <ul>
+                    <li>General conditional formatting of data (for instance, if you look for data that contain information that you are particularly interested in):</li>
+                    </ul>
+
+
+                    <p>click format -> conditional formatting -> click + to add a new rule, and go wild on colouring cells. Then use filter to sort by colors.</p>
+
+                    <p><img src="clean4.png" alt="image" width="100%"/></p>
+
+                    <p>And lastly a world on pivot tables. Great if you want to get a quick understanding of outliers.</p>
+
+                    <h2>Google.Sheets</h2>
+
+                    <ul>
+                    <li>Sometimes you have two datasets that you want to merge. For that you need one common row, which you intent to match. Here is a case to understand the VLOOKUP function:
+                    You have sheet1 and sheet2. Sheet1 contains data for the complete set of data. Sheet2 has a column with the index data (to be found somewhere in sheet1). Now you want to fill in the data from sheet1. Use VLOOKUP with the following syntax:
+                    =VLOOKUP(search_key, range, index, [is_sorted])</li>
+                    </ul>
+
+
+                    <p><a href="https://docs.google.com/spreadsheets/d/1Nm4g76kLsLSpK_llXn_y1YKGU6aa_xh-p4vsWOtLPLQ/edit?usp=sharing">Example</a>:</p>
+
+                    <p><img src="clean5.png" alt="image" width="100%" /></p>
+
+                    <p>=ArrayFormula(vlookup(A2:A4, Sheet1!1:10, {2,3, 4}, 0))</p>
+
+                    <p>Here you have your data to be filled in. Find a complete overview on VLOOKUP on <a href="https://support.google.com/docs/answer/3093318?hl=en">this link</a> for Google Sheets. Here is an additional <a href="https://productforums.google.com/forum/#!topic/docs/fMU6TvOZ0TU">example</a> with more data involved.</p>
+
+                    <p>Matching DataRows in Excel:</p>
+
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/AeYOODc-Ejs?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+
+                    <p>(More resources on cleaning data in fun(ny) programs such as Excel, follow this <a href="https://support.office.com/en-nz/article/Top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19#bmcleaning_your_data">link</a>)</p>
+
+                    <p>Here is <a href="https://breakingintowallstreet.com/biws/advanced-formulas-in-excel-index-match-indirect/">another tutorial</a>, which I found quite helpful, if you have the dreadful task to use Excel for your everyday data work.</p>
+
+                    <p>But who wants to go with Excel, if we have awesome open sources statistics programs such as R, Open Refine, and Python.</p>
+
+                    <h2>You got to love R:</h2>
+
+                    <p>R is a programming language and software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing, and you simple got to love it. Lets go thought one simple example how to clean data. Imagine you have been given data with currency values and separators in a CSV file and you want to use R for the statistical analysis. Before you can do any magic, the currency values will hinder you to produce greatness. Here is how you clean it up.</p>
+
+                    <p>Ok, so first you need your data (in my case CSV data) to be read into R (or in my case into R-Studio).</p>
+
+                    <p>download <a href="http://">data here</a>, and download R-studio <a href="https://www.rstudio.com/products/rstudio/download/">here</a>:</p>
+
+                    <p><img src="clean6.png" alt="image" />
+                    "Unclean" data with characters such as ", ", "£", or "$", which you want to remove.</p>
+
+                    <p>How to remove the characters in the cvs data?</p>
+
+                    <p><img src="clean7.png" alt="image" width="100%" />
+                    The #commands walk you through the example. Want more? One of the great resources I used is the <a href="https://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf">"Introduction to data cleaning with R"</a> from Statistics Netherland.</p>
+
+                    <p><img src="clean8.png" alt="image" width="100%" /></p>
+
+                    <p>Download the R script <a href="http://">here</a> for this little tutorial.</p>
+
+                    <p>Now you are good to go to do some plotting, statistics analysis etc. Of course, the data is not checked whether it is "statistically" clean. Hereby you would try to find and remove outliers that may skew your data.</p>
+
+                    <p><a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/merge.html">Another complete guide here</a></p>
+
+                    <h2>Open Refine</h2>
+
+                    <p>Great tool, go and download it <a href="http://openrefine.org/download.html">HERE</a>!</p>
+
+                    <p>Lets use an example dataset, and apply some changes. I help myself here with <a href="http://schoolofdata.org/handbook/recipes/cleaning-data-with-refine/">another example's case</a>.</p>
+
+                    <p>The data: the data is on the spending of over £25,000 by the University Hospitals of Leicester, and published by university Hospitals of Leicester NHS Trust. Download the data <a href="link">here</a>. There is much you can do with Open Refine. We will look at a few interesting things only.</p>
+
+                    <h3>Group the data via "text facets"</h3>
+
+                    <p><img src="clean12.png" alt="image" width="100%"/>
+                    Load the data in and click on column header -> facet -> text facet.
+                    Create categories for cleaning purposes: Faceting can help you to remove or select categories of special interest. As shown in the example, you can group them easily by creating facet, either via text, or in the context of quality (numerical facet) or via a timeline facet.</p>
+
+                    <h3>Timeline facet</h3>
+
+                    <p>Use the timeline facet by transforming the "data" column into dates. Click on it and select "edit cells", --> common transforms --> to date.</p>
+
+                    <p><img src="clean10.png" alt="image" width="100%" /></p>
+
+                    <p>Now your numbers became dates in the dates column. Click now on the column header again and select face and timeline facet. What you get is a neat selection with a slider on the left side, to select or deselect time intervals.</p>
+
+                    <p><img src="clean11.png" alt="image" width="100%"/></p>
+
+                    <h3>Reconciling Categories with Open Refine</h3>
+
+                    <p>Possibly one of the most important aspects for my work with Refine. You use it when you have "dirty data", whereby categories that should be one run under two or more categories. The problem is obviously that the cells have errors in spellings or have other variations or expression that mean the same. Refines algorithms can help. Here is what you do:
+                    Lets apply the text facet on out data in the column entity again. If we do this, we see that what actually should run under one category, now runs under several clusters. This is due to spelling errors in the data.</p>
+
+                    <p><img src="clean14.png" alt="image" width="100%" /></p>
+
+
+                    <p>It's one and the same organisation. To correct this, we reconcile categories. Refine can help you to automatically find the categories that belong together – a feature it calls “Clustering”. Click on "cluster" in the facet menu to your right. Select "nearest neighbour" or see the selection that is offered to you right away. To finish up, click on the "merge" checkboxes, and click "Merge selected and Re-cluster".</p>
+
+                    <p>Try and reconsolidate until there is only one organisation name "University Hospitals of Leicester NHS Trust".</p>
+
+                    <p><img src="clean15.png" alt="image" width="100%" /></p>
+
+                    <p>Google refine is great to use, even if you have large data. If you need to allocate more space for your big data, <a href="https://github.com/OpenRefine/OpenRefine/wiki/FAQ:-Allocate-More-Memory">you can do so</a>. It is  explained that if your project is big enough to need more than the default amount of memory, you may want to consider turning off "detect types automatically" on import as well (it's convenient, but less efficient than explicitly converting any columns that you need as a data type other than the default "string" type).</p>
+
+                    <p><img src="clean9.png" alt="image" width="100%" />
+                    expand data on Mac, instructions <a href="https://github.com/OpenRefine/OpenRefine/wiki/FAQ:-Allocate-More-Memory">here</a></p>
+
+                    <p>If you got now hungry on cleaning your data, I also encourage you to explore some more tutorials on Open Refine:</p>
+
+                    <ul>
+                    <li><p><a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=cO8NVCs_Ba0">Video on exploring data in OpenRefine
+                    </a></p></li>
+                    <li><p><a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=cO8NVCs_Ba0">Video on cleaning and transforming data using OpenRefine</a></p></li>
+                    <li><a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=5tsyz3ibYzk">Video on linking and extending datasets with various web services in OpenRefine</a>
+                    Lastly, also check out the extensions for Open Refine, there are some nifty plugins.</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
