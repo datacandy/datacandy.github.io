@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Data Analysis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://slides.com/benheubl1/deck/live#/">Presentation</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://datacandy.co.uk/">DataCandy.co.uk</a>
+                    </li>
+                    <li>
+                        <a href="http://datacandy.github.io/warwick/">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('img/post-bg.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Dr. Data Should Tell You</h1>
+                        <h2 class="subheading">  
+                            Data analysis in Neo4J and other tools to make sense of your data
+
+                        </h2>
+                        <br><br><br> <br><br><br>
+                        <br><br><br> <br><br><br>
+                        <br><br><br> <br><br><br>
+                       <span class="small">Ben Heubl, for Warwick University</span>
+                    </div>
+               <!--      <div id="particles">
+                            <div id="intro">
+                            </div>
+                        </div> -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p></p>
+
+                    <p></p>
+
+                    <h2 class="section-heading">Tool I use for data analysis</h2>
+
+                    <p>Pick your guns!</p>
+
+                    <ul>
+                    <li><a href="http://neo4j.com/">Neo4J</a> to explore networks with graph databases</li>
+                    <li>R together with R packages</li>
+                    <li>Python</li>
+                    <li>Tableau</li>
+                    <li>Excel/google docs/open source programs</li>
+                    <li>QGIS/Argis for GeoData</li>
+                    <li>Apache Drill for Big Data</li>
+                    </ul>
+
+
+                    <p>In this section of the course, we will touch Neo4J, some quick data analysis in R and other tools helping us to validate and analyse data.</p>
+
+                    <h2>Neo4J</h2>
+
+                    <p>“While working on stories like Offshore Leaks, I learned how important graph analysis is when investigating financial corruption," says Mar Cabra, editor of the Data and Research Unit at the ICIJ (International Consortium of Investigative Journalists (ICIJ). One reason more to tell you about Neo4j. Its particular good in helping you understand graph databases.</p>
+
+                    <p><img src="analysis10.png" alt="image" width="100%" />
+                    Eventually, I hope we might see more stuff out there. Some real data journalism examples include for example the story on "<a href="http://neo4j.com/case-studies/icij/">How the ICIJ Used Graph Database Technology Helped to Uncover the Swiss Leaks Story</a>".</p>
+
+                    <p>Graph databases include nodes, relationships and properties
+                    <img src="http://dev.assets.neo4j.com.s3.amazonaws.com/wp-content/uploads/2013/01/blog0116_graphcities.1.png" alt="image" width="100%" /></p>
+
+                    <p>In case you wander, here is what's a graph database:
+                    <code>In computing, a graph database is a database that uses graph structures for semantic queries with nodes, edges and properties to represent and store data. Graph databases employ nodes, properties, and edges.</code></p>
+
+                    <p>But how to get started. Good question! I think with a tangible example, many data journalists might get a better idea what it is.</p>
+
+                    <h3>Neo4J Tutorial</h3>
+
+                    <p>So lets get started. <a href="http://info.neo4j.com/download-thanks.html?edition=community&amp;flavour=osx&amp;release=2.3.0&amp;_ga=1.9430012.870875200.1446108022">The official website guides</a> you through the installation. A great book to start off with is Rik Van Bruggen's "Learning Neo4J". In chapter 5, you get a sense how to get your data into Neo4j.</p>
+
+                    <ol>
+                    <li><a href="http://neo4j.com/download/">Download</a> it and follow instructions on how to install it and run it on a local host (install Neo4j community edition visit the Neo4j Download page and follow the instructions and on your Mac, you are recommended to install via homebrew in the terminal instead).</li>
+                    <li>once installed, go to <a href="http://localhost:7474/browser/">Localhost:7474/browser</a></li>
+                    <li>Create a Record for Yourself</li>
+                    </ol>
+
+
+                    <p><code>CREATE (me:Person {name:"Ben"})
+                    RETURN me</code></p>
+
+                    <p><img src="analysis2.png" alt="image" width="100%" />
+                    Understanding Neo4js Nodes:</p>
+
+                    <p><code>Cypher uses ASCII-Art to represent patterns. You'd surround nodes with parentheses which look like circles, e.g. (node). If we later want to refer to the node, we’ll give it an identifier like (p) for person or (t) for thing. In real-world queries, we’ll probably use longer, more expressive variable names like (person) or (thing). To illustrate, if we want to find all the persons and the things they like, the query will include the identifiers person and thing. We might use a pattern like (person)--&gt;(thing) so we can refer to them later, for example, to access properties like person.name and thing.quality.</code></p>
+
+                    <ol>
+                    <li>Now create a simple 2-node relationship via 4. "CREATE (x:Label {property:"Value"})" via Neo4Js language cypher.
+                    <img src="analysis1.png" alt="image" width="100%" /></li>
+                    </ol>
+
+
+                    <p>Type into the Neo4j's console:</p>
+
+                    <p><code>MATCH  (you:Person {name:"Ben"})
+                    CREATE (me)-[like:LIKE]-&gt;(neo:Database:NoSql:Graph {name:"Neo4j" })
+                    RETURN me,like,neo</code></p>
+
+                    <p><img src="analysis3.png" alt="image" width="100%" />
+                    The relationship is written in square brackets in the centre. Spaces between words must have _ between them and notice how similar the code looks to the diagram we are building? I love easy syntax.</p>
+
+                    <ol>
+                    <li>Reading in a CSV</li>
+                    </ol>
+
+
+                    <p>Use the link for the cvs file here:
+                    <code>https://raw.githubusercontent.com/leilahaddou/graph-data/master/CAA500.csv</code>
+                    It's a dataset of the plane ownership database held by the Civil Aviation Authority (thanks to <a href="http://www.theguardian.com/profile/leila-haddou">Leila Haddou</a> for helping with her support)</p>
+
+                    <p><img src="analysis4.png" alt="image" width="100%" /></p>
+
+                    <p><code>LOAD CSV WITH HEADERS FROM "https://raw.githubusercontent.com/leilahaddou/graph-data/master/CAA500.csv" AS line
+                    MERGE (r:RegistrationMark {registrationID: line.registrationMark})
+                    MERGE (o:Owner {ownerName: line. ownerRegistration, ownerStatus: line.ownerStatus})
+                    CREATE (o)-[:OWNED_BY {ref: line.aircraftManufacturer, date: line.registrationCurrentDate}]-&gt;(r)</code></p>
+
+                    <p><img src="analysis6.png" alt="image" width="100%" /></p>
+
+                    <p>Click then on "OWNED_BY", which we specified the relationship with, and then on the "Graph" symbol:</p>
+
+                    <p><img src="analysis5.png" alt="image" width="100%" /></p>
+
+                    <p>Lastly you can change the layout (colors, or Captions in the bottom if you enlarge the picture etc.)</p>
+
+                    <p>Others have helped to support with additional resources on Neo4J (in case you are interested)</p>
+
+                    <ul>
+                    <li><p>Neo4j <a href="http://neo4j.com/docs/stable/tutorials.html">website feature tutorials</a></p></li>
+                    <li><p>Neo4j <a href="http://www.meetup.com/graphdb-london/">meetups in London</a></p></li>
+                    <li><p><a href="http://neo4j.com/books/">books</a></p></li>
+                    <li><p><a href="https://linkurio.us/visualizing-the-ties-between-big-pharmas-and-doctors-in-france/">Linkurio.us</a> blog</p></li>
+                    </ul>
+
+
+                    <h2>Analysis in R</h2>
+
+                    <p>lets do some simple data analysis in R. Download the <a href="https://raw.githubusercontent.com/kevinrobinson/mobile-learning-experience/master/edx-dataset/minutes_per_day.csv">data</a></p>
+
+                    <p>To support me in my work with R, I sometimes look at the cheatsheet here:</p>
+
+                    <p><a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">Cheatsheet1</a>: R Reference Card
+                    <a href="https://drive.google.com/folderview?ddrp=1&amp;id=0ByIrJAE4KMTtcVBmdm1BOEZoeEk">Cheatsheet2</a>: A collection on Google Drive</p>
+
+                    <p>Data: It's an example on student data to see how long students spend on an education websites</p>
+
+                    <p>Some packages such as dplyr and ggplot allow aggregate and visualize data more easily than if you used the base commands that come with R. I would also argue that the code is more semantic and easier to read. See if you can figure out what the code is doing.</p>
+
+                    <ol>
+                    <li>Read the data into rStudio:
+                    <code>data &lt;- read.csv("https://raw.githubusercontent.com/kevinrobinson/mobile-learning-experience/master/edx-dataset/minutes_per_day.csv", header=T,
+                                  colClasses=c("integer",
+                                               "Date",
+                                               "integer"))</code></li>
+                    </ol>
+
+
+                    <p>2.Get a statistical summary of the data
+                    <code>summary(data)</code></p>
+
+                    <ol>
+                    <li><p>Load in the library called dplyr
+                    <code>library(dplyr)
+                    avgdata &lt;- data %&gt;%
+                    group_by(date) %&gt;%
+                    summarise(avg_minutes = mean(minutes_on_site))</code>
+                    Note: dplyr helps to calculate the average time spend on the website each day</p></li>
+                    <li><p>Load in a library called ggplot2
+                    <code>library(ggplot2)
+                    outputviz &lt;- qplot(data=avgdata, x=date, y=avg_minutes) +
+                    geom_line() +
+                    geom_point()</code>
+                    Note: Create a graph of average minutes on the website over the time preiod</p></li>
+                    </ol>
+
+
+                    <p><img src="Rplot.png" alt="image" width="100%" /></p>
+
+                    <ol>
+                    <li>(option) interactive dataviz on the web via plotly and ggplot:</li>
+                    </ol>
+
+
+                    <p><code>install.packages("plotly")
+                    Sys.setenv("plotly_username"="benbenben")
+                    Sys.setenv("plotly_api_key"="future1000")
+                    library(plotly)
+                    ggplotly(outputviz)</code></p>
+
+                    <h1>Tableau Analysis</h1>
+
+                    <p>It's great if you have a bunch of excel data. Download the public version <a href="https://public.tableau.com/s/">here</a>. Test it with a dataset here. Again, i used here the dataset from above on planes-ownership (just saved it as an excel sheet to read it in).</p>
+
+                    <ol>
+                    <li>Load in the data via excel sheets, click then "go to sheets"
+                    <img src="analysis7.png" alt="image" width="100%" /></li>
+                    <li>command-click the different inputs on your left
+                    <img src="analysis8.png" alt="image" heigth="100" /></li>
+                    <li>choose visualisations on the right
+                    <img src="analysis9.png" alt="image" width="100%" /></li>
+                    <li>create a storyboard for exploring, and to export</li>
+                    </ol>
+
+
+                    <p>You have to get an account if you want to share your visualisation on the web. To create the iframe is a bit of a pain, but hey, who can complain about how easy it is to create the interactive graphs.
+                    Downside is that Tableau's visualisation iframes are not responsive, but as you are in the section on "analysis", you wouldn't care at this stage.</p>
+
+                    <h2>Geo Data</h2>
+
+                    <p>Here is my toolbox for GEO DATA:</p>
+
+                    <ol>
+                    <li><p>QGIS: I use it to analyse and convert shape files into GeoJson, for interactive data viz on the web. Here is my <a href="http://datacandy.co.uk/choropleth_tutorial/index.html">tutorial</a>, and the output is visualised via leaflet.js</p></li>
+                    <li><p><a href="http://leafletjs.com/">Leaflet.js</a> - very useful as it works with anything, and is really easy to use/learn</p></li>
+                    <li><p><a href="https://www.mapbox.com/">Mapbox</a> - if you feel comfortable with tiles its great, but less of an explorative tool. Easy to use for projects with ruby and d3.js</p></li>
+                    <li><p>ARCGIS - get a free account and upload your geo-data and <a href="https://developers.arcgis.com/en/sign-up/">start exploring your data</a>. The pro-version is not affordable (nowhere near), but the dev version is serving you well.</p></li>
+                    <li><p><a href="https://cartodb.com/">CartoDB</a> - again somewhat free, still a bit of a pain to help CartoDB to understand your longitude and latitude.</p></li>
+                    <li><p><a href="https://developers.google.com/maps/documentation/geocoding/intro">To get for your place names long and lat, use the Google Maps Geocoding API (you need an API key for that)</a></p></li>
+                    <li><p>Maybe less for the analysis part, but useful when your want to analyse and output GeoData is a page called <a href="http://www.mapshaper.org/">mapshaper.org</a>. Extremely useful to reduce file size, or output in different formats. Also it helps your to initially validate and analyse your geojson/shapefile/topojson data with a single click.</p></li>
+                    <li><p><a href="http://www.gdal.org/ogr2ogr.html">Gdal.org:</a> (among many uses) it helps you convert your data to other formats</p></li>
+                    </ol>
+
+
+                    <h1>For your Json Data in Particularly</h1>
+
+                    <ol>
+                    <li><p>to verify whether your data is in the right Json format (so javascript accepts it), I use <a href="http://jsonlint.com/">jsonlint.com</a>. Check it out, its awesome!</p></li>
+                    <li><p>There is something similar for GeoJson data called <a href="http://geojson.io/">Geojson.io</a>. It helps you validating your GEOJSON data sets. Just trop the file in there.</p></li>
+                    </ol>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/datajshack">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="https://github.com/datacandy">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+      <p class="copyright text-muted">Copyright &copy; Ben Heubl & DataCandy, 2015</p>                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
