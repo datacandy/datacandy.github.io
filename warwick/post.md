@@ -79,7 +79,8 @@ Tutorial
 
 4. Data Visualisation: Start wide, end narrow
 
-Ben Shneiderman’s Infovis: 
+Ben Shneiderman’s 
+Infovis 1996: 
 Overview First, Zoom and filter, then detail on demand...
 
 - The data process
