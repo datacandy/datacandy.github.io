@@ -96,13 +96,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p></p>
 
-                    <p></p>
 
-                    <h2 class="section-heading">Javascript for data Viz</h2>
 
-                    <p>Pick your guns!</p>
+                <h1>Javascript libraries for data Viz I used/used</h1>
+
+                <ul>
+                <li>D3.js</li>
+                <li>dc.js (based in d3)</li>
+                <li>C3.js (based in d3)</li>
+                <li><a href="http://dimplejs.org/examples_index.html">Dimple.js (based in d3)</a></li>
+                <li>sometimes <a href="http://www.highcharts.com/">highcharts</a></li>
+                <li><a href="https://plot.ly/javascript/">Plot.ly in javascript</a> which we going to explore in a minute</li>
+                <li><a href="http://leafletjs.com/examples/choropleth.html">Leaflet.js</a></li>
+                <li>Epoch.js for real time stuff (here a <a href="https://www.fastly.com/blog/introducing-epoch">blog post</a> about it)</li>
+                <li>graph-scroll.js (Simple scrolling events for d3 graphs. Based on stack)</li>
+                </ul>
+
+
+                <h2>Setup:</h2>
+
+                <p>before we get started to produce something for the browse window, lets install/download quickly <a href="https://github.com/yeoman/generator-gulp-webapp#readme">Yeoman</a>, which help me to get up an environment really quickly, plus it has a build in local server that updates any changes automatically (much nice to see your visualisation grow this way).</p>
+
+                <p><img src="dataviz1.png" alt="image" width="100%" /></p>
+
+                <p>So above all of the libraries mentioned above, the one the possibly allow you to go wild and creative most is D3.js.</p>
+
+                <h2>D3 tutorial: how to see something in the browser?</h2>
+
+                <p>So lets start simple. In order to see any data bound in the browser, we need out local server to work (or cd in your directory of choice, and run a local server via python $ ). Once its running, in our HTML standard setup file we include:</p>
+
+                <p><code>&lt;script src="//d3js.org/d3.v3.min.js" charset="utf-8"&gt;&lt;/script&gt;</code> for access Mike's library. I don't know about you, but i feel in the mood for a Scatterplot. This works with the SVG element of circles.</p>
+
+                <ol>
+                <li>firs we need to reference our chart with a div in the body via <code>&lt;div id="chart1"&gt;&lt;/div&gt;</code>.</li>
+                <li>The in the <Javascript> tags, we can start with the magic (you can also reference a .js file)</li>
+                </ol>
+
+
+                <p><img src="dataviz2.png" alt="image" width="100%" />
+                3. lets set the scene with a svg element, which i always think of as the canvas to draw on. We specify width, height, and a padding value (in pixels). Then we select the div element and append an svg via d3
+                <img src="dataviz3.png" alt="image" width="100%" />
+                Check the console in Chrome, there you have it:
+                <img src="dataviz4.png" alt="image" width="100%" />
+                4. Next we need to load in a dataset. D3 helps us with d3.csv, which turns out CSV data into an array of Objects.</p>
+
+                    
 
                     
 
