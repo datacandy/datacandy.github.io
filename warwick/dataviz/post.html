@@ -159,31 +159,32 @@ sup {
 <p>Javascript libraries for data Viz I used/used</p>
 
 <ul>
-<li>D3.js</li>
-<li>dc.js (based in d3)</li>
-<li>C3.js (based in d3)</li>
+<li><a href="http://d3js.org/">D3.js</a></li>
+<li><a href="https://dc-js.github.io/dc.js/">dc.js</a> (based on d3)</li>
+<li><a href="http://c3js.org/">C3.js</a> (based on d3)</li>
 <li><a href="http://dimplejs.org/examples_index.html">Dimple.js (based in d3)</a></li>
 <li>sometimes <a href="http://www.highcharts.com/">highcharts</a></li>
 <li><a href="https://plot.ly/javascript/">Plot.ly in javascript</a> which we going to explore in a minute</li>
 <li><a href="http://leafletjs.com/examples/choropleth.html">Leaflet.js</a></li>
-<li>Epoch.js for real time stuff (here a <a href="https://www.fastly.com/blog/introducing-epoch">blog post</a> about it)</li>
+<li><a href="https://github.com/epochjs/epoch">Epoch.js</a> is a real help for real time data visualisations (here a <a href="https://www.fastly.com/blog/introducing-epoch">blog post</a> about it)</li>
 <li>graph-scroll.js (Simple scrolling events for d3 graphs. Based on stack)</li>
+<li><a href="http://scrollmagic.io/">scrollmagic.io</a> - great if you want build any other scrolling events into your visualisation</li>
 </ul>
 
 
 <h2>Setup:</h2>
 
-<p>before we get started to produce something for the browse window, lets install/download quickly <a href="https://github.com/yeoman/generator-gulp-webapp#readme">Yeoman</a>, which help me to get up an environment really quickly, plus it has a build in local server that updates any changes automatically (much nice to see your visualisation grow this way).</p>
+<p>Before we get started to produce something for the browse window, lets install/download quickly <a href="https://github.com/yeoman/generator-gulp-webapp#readme">Yeoman</a>, which help me to get up an environment really quickly, plus it has a build in local server that updates any changes automatically (much nice to see your visualisation grow this way).</p>
 
 <p><img src="dataviz1.png" alt="image" /></p>
 
 <p>So above all of the libraries mentioned above, the one the possibly allow you to go wild and creative most is D3.js.</p>
 
-<h2>D3 tutorial: how to see something in the browser?</h2>
+<h2>D3 tutorial: How to see something in the browser?</h2>
 
-<p>So lets start simple. In order to see any data bound in the browser, we need out local server to work (or cd in your directory of choice, and run a local server via python $ ). Once its running, in our HTML standard setup file we include:</p>
+<p>So lets start simple. In order to see any data bound in the browser, we need out local server to work (or cd in your directory of choice, and run a local server via python ). Once its running, in our HTML standard setup file we include:</p>
 
-<p><code>&lt;script src="//d3js.org/d3.v3.min.js" charset="utf-8"&gt;&lt;/script&gt;</code> for access Mike's library. I don't know about you, but i feel in the mood for a Scatterplot. This works with the SVG element of circles.</p>
+<p><code>&lt;script src="//d3js.org/d3.v3.min.js" charset="utf-8"&gt;&lt;/script&gt;</code> to access Mike's library. I don't know about you, but I feel in the mood for a Scatterplot.</p>
 
 <ol>
 <li>firs we need to reference our chart with a div in the body via <code>&lt;div id="chart1"&gt;&lt;/div&gt;</code>.</li>
@@ -191,11 +192,38 @@ sup {
 </ol>
 
 
-<p><img src="dataviz2.png" alt="image" />
-3. lets set the scene with a svg element, which i always think of as the canvas to draw on. We specify width, height, and a padding value (in pixels). Then we select the div element and append an svg via d3
+<p>We added three buttons, which will allow the reader later to change the view for the different years:
+<img src="viz3.png" alt="image" />
+3. lets set the scene with the svg element, which I always think of as the canvas to draw on. We specify width, height, and a padding value (in pixels). Then we select the div element and append an svg via d3
 <img src="dataviz3.png" alt="image" />
 Check the console in Chrome, there you have it:
-<img src="dataviz4.png" alt="image" />
-4. Next we need to load in a dataset. D3 helps us with d3.csv, which turns out CSV data into an array of Objects.</p>
+<img src="dataviz4.png" alt="image" /></p>
+
+<h2>Lets start writing some D3 code:</h2>
+
+<p>In the javascript section, the first thing we will add is the svg.</p>
+
+<p><img src="viz2.png" alt="image" /></p>
+
+<p>Next we need to load in a dataset. D3 helps us with d3.csv, which turns our CSV data into an array of objects. Console.log it out to your chrome console via <code>console.log(data)</code>
+<img src="viz4.png" alt="image" /></p>
+
+<p>Now we set the scales. Domain is the data input, range is the data output.
+<img src="viz5.png" alt="image" /></p>
+
+<p>Same for the y-axis and the radius. to invert and correctly display the radius scale, invest with the root for rscale:
+<img src="viz7.png" alt="image" /></p>
+
+<p>add the circles to your svg
+<img src="viz8.png" alt="image" /></p>
+
+<p>append a group element to display the axis svg elements (the css class added)
+<img src="viz9.png" alt="image" /></p>
+
+<p>now to the fun part, the transitions when you click on the buttons (we do this for every button)
+<img src="viz10.png" alt="image" />
+There are many ways to do this, but a smart way would be to add raw javascript in order to write less code.</p>
+
+<p>Awesome, these are the basics. Lets pause here and motivate you to take it from here. <a href="http://alignedleft.com/work/d3-book">The book by Scott Murray</a> is helpful to get started. Other resources are listed all <a href="https://github.com/mbostock/d3/wiki/Tutorials">here</a> - all stated by the Master Chief Mike Bostock.</p>
 </body>
 </html>
