@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>In this quick tutorial we will look at how to stream tweets from Twitter into</title>
+
+</head>
+<body>
+<p>In this quick tutorial we will look at how to stream tweets from Twitter into a cvs file.</p>
+
+<p>Lets get started to stream some twitter data into a cvs file from where you can later do an analysis, or a visualisation from.</p>
+
+<p>Open up the python <a href="python/file.py">file</a>:</p>
+
+<ol>
+<li>Create a twitter account. Then go to this <a href="https://apps.twitter.com/">page</a>, and create a new twitter app, fill in the details.
+<img src="stream1.png" alt="image" />
+<img src="stream2.png" alt="image" /></li>
+<li>Access your Auth details.
+<img src="stream3.png" alt="image" /></li>
+<li>Open the python file in your favourite text editor (mine is Sublime) and insert your Auth details. Check out the script, and think about what you want to look for. Here we specified a hashtag. The script will look into the stream (only about 1% of all tweets), and output the tweets that contain the hashtags name. Can you see how useful this is when there is any big news event happening, to collect what people think. Not part of this tutorial, but you could easily write a script to analyse the tweets on its sentiment.</li>
+</ol>
+
+
+<p><img src="stream4.png" alt="image" /></p>
+
+<p>How the script works:</p>
+
+<p>Import the modules for twitter, sys and csv to be able to output the stream:
+<code>import twitter, sys, csv
+</code>
+Twitter auth procedure
+<code>CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
+ACCESS_TOKEN = ""
+ACCESS_TOKEN_SECRET = ""</code></p>
+
+<p><code>auth = twitter.oauth.OAuth(ACCESS_TOKEN, ACCESS_TOKEN_SECRET, CONSUMER_KEY,
+    CONSUMER_SECRET)</code></p>
+
+<p>define the query term (or add multiple query terms)
+<code>q = "paris"</code></p>
+
+<p>The syntax means to write to a file object (sys.stderr in this case) instead of standard output.
+<code>print &gt;&gt; sys.stderr, "Filtering the public timeline for track = \"%s\"" % q
+</code>
+Returns an instance of twitter.Twitter and references the self.auth parameter (more in detail <a href="https://dev.twitter.com/docs/streaming-apis">here</a>).</p>
+
+<p><code>twitter_api = twitter.Twitter(auth=auth)
+twitter_stream = twitter.TwitterStream(auth=twitter_api.auth)
+stream = twitter_stream.statuses.filter(track=q)</code></p>
+
+<p>Here we set the column headings for the CSV file, define the filename:
+<code>with open("twitter-hashtag-stream.csv", "a") as csv_file:
+    csv.writer(csv_file).writerow(["ID_STR", "CREATED_AT", "SCREEN_NAME",
+        "TEXT", "HASHTAGS"])</code></p>
+
+<p>Here we define the encoding, and the pick out the details for the cvs for the tweets and hashtags:
+<code>for tweet in stream:...</code>
+<code>for hashtag in tweet['entities']['hashtags']:...</code></p>
+
+<ol>
+<li>Save your file in a accessible spot</li>
+<li>run the install for python if you want (I personally love python, its simple to use). The open Ipython in the command line (I'm on IOS).</li>
+<li>type "run" and then the file path of the python file you saved it under</li>
+<li>Now the streaming API is running. Collect your cvs file in the folder you saved it in (specified in the python script)</li>
+<li>Open it up, check out what you collected - ask yourself, if this is useful.</li>
+</ol>
+
+
+<p><img src="stream5.png" alt="image" /></p>
+
+<p> A simple example on how to use the streaming API and how to end up with an output that can help to tell data driven stories.</p>
+</body>
+</html>

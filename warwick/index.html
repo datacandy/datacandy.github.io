@@ -23,9 +23,21 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/jquery-ui-1.11.4/jquery-ui.css" />
 
-      <script type='text/javascript' src='background/js/jquery.particleground.js'></script>
-  <script type='text/javascript' src='background/js/demo.js'></script>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+         <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui-1.11.4/jquery-ui.js"></script>
+
+
+
+<script type='text/javascript' src='background/js/jquery.particleground.js'></script>
+<script type='text/javascript' src='background/js/demo.js'></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -101,16 +113,123 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-            <p>Thanks for attending this presentation. I might already bore you by telling you that data is becoming ubiquitous. Oh, "big news", you might say. Even now my wristband seems to knows more than I do.</p>
+            <h1>BOOOOOOOORING DATA</h1>
 
-            <p>Who am I. No-one in particular. In fact, I could be you. Initially I was just interested in stories that have some sort of data angle. 12 months later I find myself as a data journalist. If you don't know what a data journalist does, don't blame yourself. Even many top journalists don't know what it is. Even I wonder sometimes. It essentially involved four areas. One is analysis, second is visualisation (and design), and third is data and the web. Then lastly you might want to bring everything together and write some lines about it, which then accounts for the journalism part in the word.</p>
+            <p>Thanks for attending this presentation. I might already bore you by telling you that data is becoming ubiquitous. "Big news", you might say. Or "even now my wristband seems to know more than I do". Whatever it is, let's explore what possibilities we have to use data for stories.</p>
+
+            <h2>Who am I? No-one in particular! </h2>
+
+            <p>In fact, I could be you some time ago. Initially, I was just interested in stories that have some sort of data aspect. 12 months later, I find myself as a data journalist. If you don't know what a <a href="https://en.wikipedia.org/wiki/Data_journalism">data journalist</a> is, don't blame yourself. Even many top journalists I spoke to don't know what I exactly do (but hopefully will soon know). Even I wonder sometimes. In short, it essentially involves four areas of expertise. One is analysis, second is visualization (and design), third is, well, data and lastly there is the web. Eventually you might want to bring everything together and write some lines of text about why this insight you found is interesting, what’s the takeaway (the lesson) and so on. There you have it. Are you excited? Here are 10 examples that made me get excited:</p>
+
+
             </div>
             </div>
         </div>
 
 
-                <iframe src="presentation/index.html" width="100%" height="800" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<script>
+  $(function() {
+    $( "#examplesDataJournalism" ).accordion();
+  });
+</script>
 
+
+<!--    ACCORDION JQUERY - 10 EXAMPLES 
+ -->
+<div class="container">
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+     <div id="examplesDataJournalism">
+              <h3>Example 1: Snowfall</h3>
+              <div>
+                <img src="example1.png" alt="Smiley face" width="100%">
+                <p>
+                    This was one of the starting points, I feel at least, when interactive data driven story telling became the standard. Here is a <a href="https://source.opennews.org/en-US/articles/how-we-made-snow-fall/">whole review</a> about the work on Snowfall.
+
+                    "... an exemplary piece of multimedia journalism, and its many moving (and swooping and clicking) pieces have attracted intense attention from media commentators, but Snow Fall began life not as a demonstration of technology and design capabilities, but with a traditional, in-depth piece by Times reporter John Branch."
+                    <br>
+                    <a href="http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek">The Data Viz</a>
+                    <br>
+                    <a href="https://source.opennews.org/en-US/articles/how-we-made-snow-fall/">The Background</a>
+                </p>
+              </div>
+              <h3>Example 2: What is really warming the world?</h3>
+              <div>
+                <img src="example2.png" alt="Smiley face" width="100%">
+                <p>
+                The black "observed" line is the GISS global land and ocean temperature record. It starts in 1880.
+                The colored temperature lines are the modeled estimates that each climate factor contributes to the overall temperature. Each factor was simulated five times, with different initial conditions; each slide here shows the average of five runs. GISS researchers laid out their historical simulations in detail last year in this <a href="http://www.bloomberg.com/graphics/2015-whats-warming-the-world/">article</a>. The modeled years 1850-1879 from the Phase-5 "historical" experiment are not shown because the observed data begins in 1880.
+                </p>
+                <br>
+
+                <a href="http://www.bloomberg.com/graphics/2015-whats-warming-the-world/">The Data Viz</a>
+              </div>
+              <h3>Example 3: Being black at public school in Pinellas County</h3>
+              <div>
+                <img src="example3.png" alt="Smiley face" width="100%">
+                <p>
+                    "In just eight years, Pinellas County School Board members turned five schools in the county’s black neighborhoods into some of the worst in Florida. Today thousands of children are paying the price, a Tampa Bay Times investigation has found."
+                    <br>
+                    <a href="http://www.tampabay.com/projects/2015/investigations/pinellas-failure-factories/5-schools-segregation/">Tampabay Project</a>
+                
+                </p>
+              </div>
+              <h3>Example 4: WatchDog</h3>
+              <div>
+                <img src="example4.png" alt="Smiley face" width="100%">
+
+                <p>
+                For me as a growing data journalist, the application the website presents is an impressive example how smart cities could offer their population personalised news and updates. But its also an example how to structure the UX/UI for a visualisation that most, if not all get it.
+                </p>
+                <br>
+                <a href="http://wearedata.watchdogs.com/">Wearedata.watchdogs.com/</a>
+
+              </div>
+              <h3>Example 5: Santiago Ortiz</h3>
+              <div>
+                <img src="example5.png" alt="Smiley face" width="100%">
+                <p>
+                Santiago Ortiz invents math/data/science/culture/visualization projects.
+                </p>
+                <br>
+                <a href="http://moebio.com/">Ortiz's Gallery/</a>
+
+                
+              </div>
+              <h3>Example 6: 512 Paths to the White House</h3>
+              <div>
+                <img src="example6.png" alt="Smiley face" width="100%">
+                <p>
+               Produced by MIKE BOSTOCK and SHAN CARTER, this simple visualization offered much more to the reader, it helped people to calculate chances.
+                </p>
+                <br>
+                <a href="http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html?_r=0">The Viz/</a>
+                <br>
+
+                <a href="https://source.opennews.org/en-US/articles/nyts-512-paths-white-house/">The design process/</a>
+                
+              </div>
+
+
+              <h3>Example 7: Hackattack</h3>
+              <div>
+                <img src="example7.png" alt="Smiley face" width="100%">
+                <p>
+               A mesmerizing example of data visualization by computer security firm Norse lets you see penetration attempts in real time, via a DEFCON-esque map that feels like it was ripped right from the old WarGames movie.
+               <br>
+               But now for the really scary part: This map reveals only the tiniest possible tip of the hack-attack iceberg—penetration attempts against a subset of Norse's network of "honeypot" traps alone. The actual number of hack attempts lighting up the web at any given moment is far, far greater than this nifty experiment can ever possibly show.
+                </p>
+                <br>
+                <a href="http://map.ipviking.com/?_ga=1.106938115.1477390587.1388686673">The Viz/</a>
+                <br>
+
+                <a href="http://www.pcworld.com/article/2367662/watch-the-web-get-hacked-in-real-time-on-this-mesmerizing-map.html">Background</a>
+                
+              </div>
+              
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <div class="container">
@@ -122,7 +241,7 @@
 
             <p>Goal is to tell some tricks and tips that helped me to get stated. If this is already making your eyes sleepy, then I invite you to get a quick expresso. before we start. Data can be boring, but doesn't have to be if there is a playful and creative process involved.</p>
 
-            <p><small>A word of warning: I am not calling myself an expert, far from it in fact. I am thinking about data stories probably as much as you do. So if you see mistakes/errors or false claims, let me know. That is the good part about open source movement, we are all developing this together.</small></p>
+            <p><small>A word of warning: I am not calling myself an expert, far from it in fact. I am thinking about data stories probably as much as you do. So if you see mistakes/errors or false claims, let me know. That is the good part about open source movements like this, we are all developing this together.</small></p>
 
 <!--                 <div class="post-preview">
                     <a href="post.html">
@@ -171,21 +290,20 @@
                             <small>Whether complex javascript libraties or not, at the end of your journey, you want to visualise </small>
                         </h3>
                     </a>
-                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
+                    <p class="post-meta">Ben Heubl<a href="dataviz/index.html"> December 10</a> 2015</p>
                 </div>
                 <hr>
 
                 <div class="post-preview">
-                    <a href="post.html">
+                    <a href="datastream/index.html">
                         <h2 class="post-title">
-                            4. Quick Tutorial: Big Data
+                            4. Quick Tutorial: Data Streaming
                         </h2>
                         <h3 class="post-subtitle">
-                            How to play with big data as data journalist?
-                            <small>Intro to Apache Drill is an open-source software framework that supports data-intensive distributed applications for interactive analysis of large-scale datasets.</small>
+                            <small>Here we check out an example how to work with twitter data.</small>
                         </h3>
                     </a>
-                    <p class="post-meta">Ben Heubl<a href="#"> December 10</a> 2015</p>
+                    <p class="post-meta">Ben Heubl<a href="datastream/index.html"> December 10</a> 2015</p>
                 </div>
                 <hr>
 
@@ -205,6 +323,12 @@
                
             </div>
         </div>
+    </div>
+
+    <hr>
+
+    <div id="iframe">
+        <iframe src="presentation/index.html" width="100%" height="800" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 
     <a href="https://github.com/datacandy/warwick"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
@@ -240,8 +364,6 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

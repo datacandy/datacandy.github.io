@@ -33,4 +33,5 @@ So lets start simple. In order to see any data bound in the browser, we need out
 ![image](dataviz3.png)
 Check the console in Chrome, there you have it:
 ![image](dataviz4.png)
-4. Next we need to load in a dataset. D3 helps us with d3.csv, which turns out CSV data into an array of Objects
+4. Next we need to load in a dataset. D3 helps us with d3.csv, which turns out CSV data into an array of Objects.
+
