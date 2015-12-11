@@ -14,6 +14,11 @@ produce annotations and labels from there - interpreter of data into information
 Explanatory: Illustrator, Javascript / D3.js, R (ggplot2), Tableau, Jupyter / IPython notebook
 (finished product)
 
+
+python code example by David Blood
+
+
+
 - Goals: 
 What the focus, do you want the user find something they personally can relate to it, or do you want to tell them what you have found and why it is worthwhile to be understood?
 
