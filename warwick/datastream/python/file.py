@@ -8,7 +8,7 @@ ACCESS_TOKEN_SECRET = ""
 auth = twitter.oauth.OAuth(ACCESS_TOKEN, ACCESS_TOKEN_SECRET, CONSUMER_KEY,
 	CONSUMER_SECRET)
 
-q = "paris" 
+q = "asylanten" 
 
 print >> sys.stderr, "Filtering the public timeline for track = \"%s\"" % q
 
